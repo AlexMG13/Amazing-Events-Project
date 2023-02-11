@@ -37,6 +37,9 @@ main {
 .btn-active {
     background-color: var(--secondary-color);
     color: var(--third-color);
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 1em;
 }
 
 .btn-a:hover {

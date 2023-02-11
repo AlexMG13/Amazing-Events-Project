@@ -1,14 +1,45 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 :root {
     --primary-color: #181D31;
     --secondary-color: #678983;
     --third-color: #E6DDC4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Shadows", "sans-serif";
+}
+
+nav {
+    background-color: var(--primary-color);
+}
+
+h1, h2 {
+    color: var(--third-color);
+}
+
+main {
+    background-color: var(--secondary-color);
+}
+
+.btn-a {
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    cursor: pointer;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-active {
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+}
+
+.btn-a:hover {
+    background-color: var(--third-color);
+    color: var(--second-color);
 }

@@ -54,7 +54,6 @@ a {
     border: none;
     border-radius: 0.25em;
     padding: 0.75em;
-    font-size: 1.5em;
 }
 
 .btn-active {
@@ -109,7 +108,8 @@ a {
     height: 400px;
 }
 
-table, th, td{
+table, th, td {
     border: 1px solid;
     empty-cells: show;
+    padding: 0 0.5em;
 }

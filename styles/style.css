@@ -71,6 +71,10 @@ a {
     color: var(--second-color);
 }
 
+.btn-active:hover {
+    color: var(--third-color);
+}
+
 .text-card-d{
     color: var(--primary-color);
     text-align: center;
@@ -112,4 +116,30 @@ table, th, td {
     border: 1px solid;
     empty-cells: show;
     padding: 0 0.5em;
+}
+
+.navbar-collapse {
+    align-items: center;
+    flex-grow: 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .btn-a {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        text-decoration: none;
+        border: none;
+        border-radius: 0.25em;
+        padding: 0.25em;
+        margin: 0.25em;
+        text-align: center;
+    }
+    .th-c {
+        height: 2em;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        font-size: 1em;
+        font-weight: bold;
+    }
 }

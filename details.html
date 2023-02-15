@@ -12,48 +12,66 @@
     <title>Amazing Events</title>
 </head>
 
-<body>
+<body class="details-body">
     <header>
-        <nav class="navbar">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <div class="navbar-brand mx-2">
-                    <a href="#"><img src="./assets/img/logos/Logo-Amazing-Events.png" alt="Amazing Events Logo" width="175"
+                <a href="#"><img src="./assets/img/logos/Logo-Amazing-Events.png" alt="Amazing Events Logo" width="175"
                         height="75"></a>
-                </div>
-                <div class="mx-2">
-                    <a class="btn-a" href="./index.html">Home</a>
-                    <a class="btn-a" href="./upcoming.html">Upcoming Events</a>
-                    <a class="btn-a" href="./past.html">Past Events</a>
-                    <a class="btn-a" href="./contact.html">Contact</a>
-                    <a class="btn-a" href="./stats.html">Stats</a>
+                <button class="navbar-toggler bg-section-1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon bg-section-1"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link btn-active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link btn-a" href="./upcoming.html">Upcoming Events</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link btn-a" href="./past.html">Past Events</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link btn-a" href="./contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link btn-a" href="./stats.html">Stats</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="d-flex justify-content-center my-4">
-        <div class="box-details p-4 d-flex justify-content-center align-items-center">
-            <div class="m-2 p-2 box-details-inside">
-                <img class="img-fluid" src="./assets/img/events/Cinema.jpg" alt="cinema picture">
-            </div>
-            <div class="m-2 p-2 text-center box-details-inside">
-                <h3>Title</h3>
-                <p>Descriptive text</p>
-                <p>Descriptive text</p>
-                <p>Descriptive text</p>
-            </div>
+    <main>
+        <div class="py-4 bg-section-2">
+            <div class="card mb-3 bg-section-1" style="max-width: 992px;">
+                <div class="row g-0  justify-content-center  align-items-center">
+                  <div class="col-md-4">
+                    <img src="./assets/img/events/Cinema.jpg" class="img-fluid rounded-start" alt="cinema picture">
+                  </div>
+                  <div class="col-md-8 text-card-d">
+                    <div class="card-body">
+                      <h5 class="card-title">Title</h5>
+                      <p class="card-text">Descriptive text</p>
+                      <p class="card-text">Descriptive text</p>
+                      <p class="card-text">Descriptive text</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
     </main>
     <footer>
-        <div class="py-2 d-flex justify-content-between bg-primary-1 align-items-baseline">
-            <div>
-                <a class="m-2" href="https://www.whatsapp.com/" target="_blank"><img
-                        src="./assets/img/social/whatsapp_flat.png" alt="Whatsapp Logo" width="40" height="40"></a>
-                <a class="m-2" href="https://www.facebook.com/" target="_blank"><img
-                        src="./assets/img/social/facebook_flat.png" alt="Facebook Logo" width="40" height="40"></a>
-                <a class="m-2" href="https://www.instagram.com/" target="_blank"><img
-                        src="./assets/img/social/instagram_flat.png" alt="Instagram Logo" width="40" height="40"></a>
-            </div>
-            <p class="mx-4 color-p1">Cohorte 09</p>
+        <div class="py-2 d-flex justify-content-start bg-primary-1 align-items-baseline">
+            <a class="m-2" href="https://www.whatsapp.com/" target="_blank"><img
+                    src="./assets/img/social/whatsapp_flat.png" alt="Whatsapp Logo" width="40" height="40"></a>
+            <a class="m-2" href="https://www.facebook.com/" target="_blank"><img
+                    src="./assets/img/social/facebook_flat.png" alt="Facebook Logo" width="40" height="40"></a>
+            <a class="m-2" href="https://www.instagram.com/" target="_blank"><img
+                    src="./assets/img/social/instagram_flat.png" alt="Instagram Logo" width="40" height="40"></a>
         </div>
     </footer>
 

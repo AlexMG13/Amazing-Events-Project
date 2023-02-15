@@ -14,18 +14,33 @@
 
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <div class="navbar-brand mx-2">
-                    <a href="./index.html"><img src="./assets/img/logos/Logo-Amazing-Events.png" alt="Amazing Events Logo" width="175"
+                <a href="#"><img src="./assets/img/logos/Logo-Amazing-Events.png" alt="Amazing Events Logo" width="175"
                         height="75"></a>
-                </div>
-                <div class="mx-2">
-                    <a class="btn-a" href="./index.html">Home</a>
-                    <a class="btn-a" href="./upcoming.html">Upcoming Events</a>
-                    <a class="btn-a" href="./past.html">Past Events</a>
-                    <a class="btn-active" href=".#">Contact</a>
-                    <a class="btn-a" href="./stats.html">Stats</a>
+                <button class="navbar-toggler bg-section-1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon bg-section-1"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link btn-a" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link btn-a" href="./upcoming.html">Upcoming Events</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link btn-a" href="./past.html">Past Events</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link btn-active" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link btn-a" href="./stats.html">Stats</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -44,35 +59,36 @@
                 </div>
             </div>
         </section>
-        <div class="bg-section-2 py-2 ct-1 d-flex justify-content-center">
-            <div class="mx-4">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name:</label>
-                    <input type="text" class="form-control" id="name">
+        <form action="">
+            <div class="bg-section-2 py-2 ct-1 ">
+                <div class="mx-4 d-flex flex-column justify-content-center">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensagge" class="form-label">Mensagge:</label>
+                        <textarea class="form-control" id="mensagge" rows="3"></textarea>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email:</label>
-                    <input type="email" class="form-control" id="email">
+                <div class="d-flex justify-content-end mx-4">
+                    <button class="btn-a" type="submit">Submit</button>
                 </div>
-                <div class="mb-3">
-                    <label for="mensagge" class="form-label">Mensagge:</label>
-                    <textarea class="form-control" id="mensagge" rows="3"></textarea>
-                </div>
-                <button class="btn-a" type="submit">Submit</button>
             </div>
-        </div>
+        </form>
     </main>
     <footer>
-        <div class="py-2 d-flex justify-content-between bg-primary-1 align-items-baseline">
-            <div>
-                <a class="m-2" href="https://www.whatsapp.com/" target="_blank"><img
-                        src="./assets/img/social/whatsapp_flat.png" alt="Whatsapp Logo" width="40" height="40"></a>
-                <a class="m-2" href="https://www.facebook.com/" target="_blank"><img
-                        src="./assets/img/social/facebook_flat.png" alt="Facebook Logo" width="40" height="40"></a>
-                <a class="m-2" href="https://www.instagram.com/" target="_blank"><img
-                        src="./assets/img/social/instagram_flat.png" alt="Instagram Logo" width="40" height="40"></a>
-            </div>
-            <p class="mx-4 color-p1">Cohorte 09</p>
+        <div class="py-2 d-flex justify-content-start bg-primary-1 align-items-baseline">
+            <a class="m-2" href="https://www.whatsapp.com/" target="_blank"><img
+                    src="./assets/img/social/whatsapp_flat.png" alt="Whatsapp Logo" width="40" height="40"></a>
+            <a class="m-2" href="https://www.facebook.com/" target="_blank"><img
+                    src="./assets/img/social/facebook_flat.png" alt="Facebook Logo" width="40" height="40"></a>
+            <a class="m-2" href="https://www.instagram.com/" target="_blank"><img
+                    src="./assets/img/social/instagram_flat.png" alt="Instagram Logo" width="40" height="40"></a>
         </div>
     </footer>
 

@@ -1,4 +1,4 @@
-
+document.title='Past Events';
 
 function pastDate(arrData,date) {
     let currentDate = arrData.currentDate;
@@ -18,7 +18,7 @@ pastCards.innerHTML = paCards(pastEvents);
 
 function paCards(arrData){
     let cards = '';
-    for (event of arrData){
+    for (let event of arrData){
         cards += `<div class="card m-2 bg-section-1" style="width: 18rem;">
         <img src="${event.image}" class="card-img-top mt-2"
             alt="${event.name}">

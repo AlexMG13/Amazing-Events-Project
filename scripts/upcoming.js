@@ -1,3 +1,4 @@
+document.title='Upcoming Events';
 
 function upcomingDate(arrData, date) {
     let currentDate = arrData.currentDate;
@@ -15,14 +16,13 @@ function upcomingDate(arrData, date) {
 
 const upcomingEvents = data.events.filter(event => upcomingDate(data,event.date));
 
-
 let upcomingCards = document.getElementById('upcoming-card');
 
 upcomingCards.innerHTML = upCards(upcomingEvents);
 
 function upCards(arrData){
     let cards = '';
-    for (event of arrData){
+    for (let event of arrData){
         cards += `<div class="card m-2 bg-section-1" style="width: 18rem;">
         <img src="${event.image}" class="card-img-top mt-2"
             alt="${event.name}">
@@ -38,3 +38,4 @@ function upCards(arrData){
     }
     return cards;
 }
+

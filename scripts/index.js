@@ -1,10 +1,12 @@
+document.title='Home';
+
 let homeCards = document.getElementById('home-card');
 
 homeCards.innerHTML = indexCards(data.events);
 
 function indexCards(arrData){
     let cards = '';
-    for (event of arrData){
+    for (let event of arrData){
         cards += `<div class="card m-2 bg-section-1" style="width: 18rem;">
         <img src="${event.image}" class="card-img-top mt-2"
             alt="${event.name}">
@@ -20,3 +22,4 @@ function indexCards(arrData){
     }
     return cards;
 }
+

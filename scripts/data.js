@@ -1,5 +1,4 @@
 
-
 var data = {
     "currentDate": "2022-01-01",
     "events": [
@@ -174,21 +173,4 @@ var data = {
     ]
   };
 
-
-/*   console.log(data.events[0].category);
-  console.log(data.events.length);
-  console.log(data.events[13]);
- */
-  let allCategories = [];
-
-  function getCategory() {
-    for (var i = 0; i < data.events.length; i++) {
-      allCategories.push(data.events[i].category);
-    }
-    return allCategories;
-  }
-  
-  getCategory();
-
-  console.log(allCategories);
   

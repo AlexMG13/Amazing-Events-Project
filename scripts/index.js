@@ -14,7 +14,7 @@ function indexCards(arrData){
             <h5 class="card-title">${event.name}</h5>
             <p class="card-text">${event.description}</p>
             <div class="d-flex justify-content-between align-items-baseline">
-                <p>Precio: ${event.price}</p>
+                <p>Precio: $${event.price}</p>
                 <a href="./details.html" class="btn-b">view more</a>
             </div>
         </div>

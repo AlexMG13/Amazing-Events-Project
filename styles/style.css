@@ -143,3 +143,8 @@ table, th, td {
         font-weight: bold;
     }
 }
+
+.card-d {
+    weight: 50rem;
+    height: 20rem;
+}

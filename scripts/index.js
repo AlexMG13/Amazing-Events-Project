@@ -8,7 +8,7 @@ function indexCards(arrData) {
         <p class="card-text">${event.description}</p>
         <div class="d-flex justify-content-between align-items-baseline">
             <p>Precio: $${event.price}</p>
-            <a href="./details.html" class="btn-b">view more</a>
+            <a href="./details.html?id=${event._id}" class="btn-b">view more</a>
         </div>
     </div>
 </div>`)
@@ -33,6 +33,13 @@ function showCategories(arrData) {
   );
   return categories;
 }
+
+function searchEvent(arrData, nameEvent){
+  let events = arrData.filter(event => event.name.toLowerCase() === nameEvent.toLowerCase() || event.description.toLowerCase() === nameEvent.toLowerCase());
+  return events;
+}
+
+
 
 
 document.title = "Home";

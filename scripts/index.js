@@ -34,13 +34,13 @@ function showCategories(arrData) {
   return categories;
 }
 
-function searchEvent(arrData, nameEvent){
-  let events = arrData.filter(event => event.name.toLowerCase() === nameEvent.toLowerCase() || event.description.toLowerCase() === nameEvent.toLowerCase());
-  return events;
+
+let searchEvent = document.getElementById("search");
+searchEvent.addEventListener('change', () => {
+  let events = data.events.filter(event => event.name.toLowerCase().includes(searchEvent.value.toLowerCase()) || event.description.toLowerCase().includes(searchEvent.value.toLowerCase()))
+  homeCards.innerHTML = indexCards(events);
 }
-
-
-
+)
 
 document.title = "Home";
 
@@ -49,3 +49,4 @@ homeCards.innerHTML = indexCards(data.events);
 
 let homeCategories = document.getElementById("category");
 homeCategories.innerHTML = showCategories(getCategory(data.events));
+

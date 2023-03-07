@@ -17,7 +17,7 @@ function upCards(arrData){
         <p class="card-text">${event.description}</p>
         <div class="d-flex justify-content-between align-items-baseline">
             <p>Precio: $${event.price}</p>
-            <a href="./details.html" class="btn-b">view more</a>
+            <a href="./details.html?id=${event._id}" class="btn-b">view more</a>
         </div>
     </div>
 </div>`)
@@ -42,6 +42,14 @@ function showCategories(arrData) {
   );
   return categories;
 }
+
+
+let searchEvent = document.getElementById("search");
+searchEvent.addEventListener('change', () => {
+  let events = upcomingEvents.filter(event => event.name.toLowerCase().includes(searchEvent.value.toLowerCase()) || event.description.toLowerCase().includes(searchEvent.value.toLowerCase()))
+  upcomingCards.innerHTML = upCards(events);
+}
+)
 
 const upcomingEvents = data.events.filter(event => upcomingDate(data,event.date));
 

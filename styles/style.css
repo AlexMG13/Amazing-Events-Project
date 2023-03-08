@@ -154,3 +154,11 @@ table, th, td {
     weight: 50rem;
     height: 20rem;
 }
+
+.img-w {
+    width: 80%;
+}
+
+.view {
+    height: 100vh;
+}

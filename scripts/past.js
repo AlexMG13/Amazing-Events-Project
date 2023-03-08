@@ -35,18 +35,21 @@ function getCategory(arrData){
 function showCategories(arrData) {
     let categories = "";
     arrData.map((category) => (categories += `<div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="${category}" value="${category}">
-    <label class="form-check-label" for="${category}">${category}</label></div>`)
+    <input class="form-check-input" type="checkbox" id="checkbox" value="${category}">
+    <label class="form-check-label" for="checkbox">${category}</label></div>`)
     );
     return categories;
 }
 
-let searchEvent = document.getElementById("search");
-searchEvent.addEventListener('change', () => {
-  let events = pastEvents.filter(event => event.name.toLowerCase().includes(searchEvent.value.toLowerCase()) || event.description.toLowerCase().includes(searchEvent.value.toLowerCase()))
-  pastCards.innerHTML = paCards(events);
-}
-)
+function eventFilter(arrData){
+    let eventFiltered = [];
+    arrData.forEach((element) => {
+      if (eventFiltered.indexOf(element) < 0) {
+        eventFiltered.push(element);
+      }
+    });
+    return eventFiltered;
+  }
 
 
 const pastEvents = data.events.filter(event => pastDate(data,event.date));
@@ -58,3 +61,32 @@ pastCards.innerHTML = paCards(pastEvents);
 
 let homeCategories = document.getElementById("category");
 homeCategories.innerHTML = showCategories(getCategory(data.events));
+
+
+let buttonEvents = document.getElementById('button');
+let checkboxEvents = document.querySelectorAll('#checkbox');
+
+function categoryCheckFilter(arrData){
+  let category =[];
+  for(let i=0; i<arrData.length; i++){
+    if(arrData[i].checked){
+      category.push(arrData[i].value);
+    }
+  }
+  return category;
+}
+
+
+buttonEvents.addEventListener('click', (e)=> {
+  e.preventDefault();
+  let eventsearch= [];
+  pastCards.innerHTML = '';
+  let searchEvent = document.getElementById("search").value;
+  if(searchEvent!=''){
+    eventsearch = pastEvents.filter(event => (event.name.toLowerCase().includes(searchEvent.toLowerCase()) && searchEvent != '') || event.description.toLowerCase().includes(searchEvent.toLowerCase()));
+  }
+  let category = categoryCheckFilter(checkboxEvents);
+  let eventsCheck = pastEvents.filter(event => category.includes(event.category));
+  let bothArr = eventsearch.concat(eventsCheck);
+  pastCards.innerHTML = paCards(eventFilter(bothArr));
+})

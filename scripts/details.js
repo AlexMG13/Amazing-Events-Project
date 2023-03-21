@@ -1,11 +1,10 @@
-
-
-
 const detailCard = document.querySelector('#detailCard');
-
+const queryString = location.search;
+const params = new URLSearchParams(queryString);
+const id= params.get("id");
+console.log(id);
 function detailsCard(event,place){
     let card = '';
-
     card += `
     <div class="text-center card card-d d-flex justify-content-center mx-4 bg-section-1">
     <div class="row align-items-center">
@@ -23,15 +22,17 @@ function detailsCard(event,place){
 
     place.innerHTML = card;
 }
+
+
 let eventsFetched = '';
 async function getData(){
+    //fetch('./API.json')
     await fetch('https://mindhub-xj03.onrender.com/api/amazing').then(response => response.json()).then(datosApi => {
       eventsFetched = datosApi;
+      const detailEvent = eventsFetched.events.find(event => event._id === parseInt(id));
+      detailsCard(detailEvent,detailCard);
       console.log(eventsFetched);
     }).catch(error => console.log(error.message))
-    const queryString = location.search;
-    const params = new URLSearchParams(queryString);
-    const id= params.get("id");
-    const detailEvent = eventsFetched.events.find(event => event._id === parseInt(id));
-    detailsCard(detailEvent,detailCard); 
     }
+
+getData();

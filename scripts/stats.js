@@ -79,6 +79,7 @@ function otherTables(arrData){
 
 let eventsFetched = [];
 async function getData(){
+    //fetch('./API.json')
     await fetch('https://mindhub-xj03.onrender.com/api/amazing').then(response => response.json()).then(datosApi => {
       eventsFetched = datosApi;
       let upcomingEvents = eventsFetched.events.filter(event => upcomingDate(eventsFetched,event.date));

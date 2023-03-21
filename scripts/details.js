@@ -2,7 +2,6 @@ const detailCard = document.querySelector('#detailCard');
 const queryString = location.search;
 const params = new URLSearchParams(queryString);
 const id= params.get("id");
-console.log(id);
 function detailsCard(event,place){
     let card = '';
     card += `
@@ -31,7 +30,6 @@ async function getData(){
       eventsFetched = datosApi;
       const detailEvent = eventsFetched.events.find(event => event._id === parseInt(id));
       detailsCard(detailEvent,detailCard);
-      console.log(eventsFetched);
     }).catch(error => console.log(error.message))
     }
 

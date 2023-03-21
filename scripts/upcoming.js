@@ -73,7 +73,6 @@ async function getData(){
   await fetch('https://mindhub-xj03.onrender.com/api/amazing').then(response => response.json()).then(datosApi => {
     eventsFetched = datosApi;
     const upcomingEvents = eventsFetched.events.filter(event => upcomingDate(eventsFetched,event.date));
-    console.log(upcomingEvents); 
     upCards(upcomingEvents,upcomingCards);
     showCategories(getCategory(eventsFetched.events),homeCategories);
     buttonFunction();

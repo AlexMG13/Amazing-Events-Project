@@ -51,7 +51,6 @@ let buttonEvents = document.getElementById('button');
 function buttonFunction(e){
   e.preventDefault();
   let pastEvents = eventsFetched.events.filter(event => pastDate(eventsFetched,event.date));
-  console.log(pastEvents)
   pastCards.innerHTML = '';
   let eventsearch =[];
   let searchEvent = document.getElementById("search").value;
@@ -73,7 +72,6 @@ async function getData(){
   await fetch('https://mindhub-xj03.onrender.com/api/amazing').then(response => response.json()).then(datosApi => {
     eventsFetched = datosApi;
     const pastEvents = eventsFetched.events.filter(event => pastDate(eventsFetched,event.date));
-    console.log(pastEvents)
     paCards(pastEvents,pastCards);
     showCategories(getCategory(eventsFetched.events),homeCategories);
     buttonFunction();
